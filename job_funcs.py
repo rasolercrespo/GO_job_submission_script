@@ -80,11 +80,13 @@ def WriteJobScript():
 	file.write('#SBATCH --mail-user=rasolercrespo@u.northwestern.edu\n')
 	file.write('#SBATCH --mail-type=ALL\n')
 	file.write('#SBATCH -A TG-MSS140028\n')
+	file.write('\n')
 	file.write('module load intel/14.0.1.106\n')
 	file.write('module load mvapich2/2.0b\n')
 	file.write('module load cp2k\n')
 	file.write('\n')
 	file.write('export MV2_USE_OLD_BCAST=0\n')
+	file.write('\n')
 	file.write('. autoexec.bash')
 
 	# Close the file upon finishing
