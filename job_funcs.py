@@ -152,6 +152,9 @@ def WritePullX(cell):
 	script = open('write_input_x.py', 'w')
 	
 	# Write the Python script for pulling
+	script.write('import os\n')
+	script.write('import math\n')
+	script.write('\n')
 	script.write('a = ' + str(a) + '\n')
 	script.write('b = ' + str(b) + '\n')
 	script.write('c = ' + str(c) + '\n')
