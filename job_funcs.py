@@ -250,9 +250,6 @@ def WritePullX(cell):
 def WritePullY(cell):
 	# Write the x-direction pulling script for the MM calculation involved in this work
 	# based on the CELL section of the CELL_OPT restart file
-	
-	# Remove header from CELL list
-	del cell[0]
 
 	# Store A, B and C cell vectors
 	a = float(cell[0].split()[1])
@@ -260,7 +257,7 @@ def WritePullY(cell):
 	c = float(cell[2].split()[3])
 
 	# Open the file to write
-	script = open('write_input_x.py', 'w')
+	script = open('write_input_y.py', 'w')
 	
 	# Write the Python script for pulling
 	script.write('import os\n')
@@ -362,16 +359,13 @@ def WritePullBoth(cell):
 	# Write the x-direction pulling script for the MM calculation involved in this work
 	# based on the CELL section of the CELL_OPT restart file
 	
-	# Remove header from CELL list
-	del cell[0]
-
 	# Store A, B and C cell vectors
 	a = float(cell[0].split()[1])
 	b = float(cell[1].split()[2])
 	c = float(cell[2].split()[3])
 
 	# Open the file to write
-	script = open('write_input_x.py', 'w')
+	script = open('write_input_both.py', 'w')
 	
 	# Write the Python script for pulling
 	script.write('import os\n')
